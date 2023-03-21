@@ -11,7 +11,7 @@
  * You can only use `putchar` up to 6 times.
  * You are not allowed to use any variables of type `char`.
  * Return: 0
- */
+ **/
 int main(void)
 {
 	int i, j, k, l;
