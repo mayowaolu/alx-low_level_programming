@@ -6,23 +6,24 @@
  * Return: encoded string `s`
  */
 
-char *leet(char *s)
+char *leet(char *str)
 {
-	int i;
+	int i = 0, j = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	char big[] = {'A', 'a', 'E', 'e', 'O', 'o', 'T', 't', 'L', 'l'};
+	char num[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
+
+	while (str[i] != '\0')
 	{
-		while (s[i] == 'a' || s[i] == 'A')
-			s[i] = '4';
-		while (s[i] == 'e' || s[i] == 'E')
-			s[i] = '3';
-		while (s[i] == 'o' || s[i] == 'O')
-			s[i] = '0';
-		while (s[i] == 't' || s[i] == 'T')
-			s[i] = '7';
-		while (s[i] == 'l' || s[i] == 'L')
-			s[i] = '1';
+		for (j = 0; j < 10; j++)
+		{
+			if (str[i] == big[j])
+			{
+				str[i] = num[j];
+				break;
+			}
+		}
+		i++;
 	}
-
-	return (s);
+	return (str);
 }
