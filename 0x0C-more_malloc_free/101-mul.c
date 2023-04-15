@@ -1,5 +1,6 @@
 #include "main.h"
 #include <limits.h>
+#include <stdio.h>
 /**
  * str_len - finds string length
  * @str: input pointer to string
