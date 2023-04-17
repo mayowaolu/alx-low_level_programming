@@ -14,30 +14,28 @@ void times_table(void)
 		while (j <= 9)
 		{
 			k = i * j;
-			if (k <= 9)
+			if (j == 0 && k == 0)
 			{
 				_putchar(k + '0');
 			}
-			else
+			else if (j > 0 && k < 10)
 			{
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(k + '0');
+			}
+			else if (j > 0 && k >= 10)
+			{
+				_putchar(' ');
 				_putchar((k / 10) + '0');
 				_putchar((k % 10) + '0');
 			}
-			if ((j < 9) && (k < 10))
-			{
+
+			if (j < 9)
 				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-			}
-			else if ((j < 9) && (k > 9))
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
 			else
-			{
 				_putchar('\n');
-			}
+
 			j++;
 		}
 		i++;
