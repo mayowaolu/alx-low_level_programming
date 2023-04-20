@@ -7,24 +7,27 @@
 void print_number(int n)
 {
 	int d, x;
+	unsigned int num;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		num = n * -1;
 	}
+	else
+		num = n;
 
 	d = 1;
-	while (n / d > 9)
+	while (num / d > 9)
 	{
 		d = d * 10;
 	}
 
 	while (d > 0)
 	{
-		x = n / d;
+		x = num / d;
 		_putchar(x + '0');
-		n = n % d;
+		num = num % d;
 		d = d / 10;
 	}
 }
