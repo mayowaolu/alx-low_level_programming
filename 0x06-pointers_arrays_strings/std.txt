@@ -1,0 +1,7 @@
+
+Command 'tegh' not found, did you mean:
+
+  command 'tesh' from deb libsimgrid-dev (3.24+dfsg-3)
+
+Try: apt install <deb name>
+
